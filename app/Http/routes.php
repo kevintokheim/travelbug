@@ -66,6 +66,28 @@ Route::get('/signout', [
 	'uses' => '\travelbug\Http\Controllers\SearchController@getResults',
 	'as' => 'search.results',
  ]);
+ 
+ /**
+  * Profile
+  */
+  
+  Route::get('/user/{username}', [
+	'uses' => '\travelbug\Http\Controllers\ProfileController@getProfile',
+	'as' => 'profile.index',
+  ]);
+  
+  //Update Profile
+  Route::get('/profile/edit', [
+	'uses' => '\travelbug\Http\Controllers\ProfileController@getEdit',
+	'as' => 'profile.edit',
+	'middleware' => ['auth'],
+  ]);
+  
+  Route::post('/profile/edit', [
+	'uses' => '\travelbug\Http\Controllers\ProfileController@postEdit',
+	'as' => 'profile.edit',
+	'middleware' => ['auth'],
+  ]);
 
 
 
