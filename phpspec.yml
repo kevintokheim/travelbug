@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: travelbug
+        psr4_prefix: travelbug
+        src_path: app
