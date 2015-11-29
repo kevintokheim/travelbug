@@ -22,6 +22,7 @@ class SearchController extends Controller
 		//Performs a raw DB query which compares the query to the first and last name of a user
 		//or to the username.
 		//There may be a better, faster and safer way to do this search
+		
 		$users = User::where(DB::raw("CONCAT(first_name, ' ', last_name)"), 'LIKE', "%{$query}%")->orWhere('username', 'LIKE', "%{$query}%")->get();
 		
 		//dd($users);

@@ -88,6 +88,32 @@ Route::get('/signout', [
 	'as' => 'profile.edit',
 	'middleware' => ['auth'],
   ]);
+  
+ /**
+  * Friends
+  */
+  
+  Route::get('/friends', [
+	'uses' => '\travelbug\Http\Controllers\FriendController@getIndex',
+	'as' => 'friends.index',
+	'middleware' => ['auth'],
+  ]);
+  
+  //Route to add a friend
+  Route::get('/friends/add/{username}', [
+	'uses' => '\travelbug\Http\Controllers\FriendController@getAdd', 
+	'as' => 'friends.add',
+	'middleware' => ['auth'],
+  ]);
+  
+  //Route to accept a friend request
+  Route::get('/friends/accept/{username}', [
+	'uses' => '\travelbug\Http\Controllers\FriendController@getAccept',
+	'as' => 'friends.accept',
+	'middleware' => ['auth'],
+  ]);
+  
+  
 
 
 
