@@ -67,6 +67,13 @@ class User extends Model implements AuthenticatableContract,
 		return "https://www.gravatar.com/avatar/{{ md5($this->email) }}?d=mm&s=70";
 	}
 	
+	//Connects many statuses to a single user using a hasMany (or 'one-to-many') relationship
+	//Connects a status to a user_id
+	public function statuses()
+	{
+		return $this->hasMany('travelbug\Models\Status', 'user_id');
+	}
+	
 	//Friends of mine
 	public function friendsOfMine()
 	{

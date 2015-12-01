@@ -24,6 +24,11 @@ class FriendController extends Controller
 			return redirect()->route('home')->with('info', 'That user could not be found.');
 		}
 		
+		//Prevents the user from adding themselves as a friend
+		if(Auth::user()->id === $user->id){
+			return redirect()->route('home');
+		}
+		
 		//Checks to see if a user has a friend request pending
 		if(Auth::user()->hasFriendRequestPending($user) || $user->hasFriendRequestPending(Auth::user())){
 			return redirect()->route('profile.index', ['username' => $user->username])->with('info', 'Friend request already pending.');

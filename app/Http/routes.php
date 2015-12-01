@@ -89,9 +89,9 @@ Route::get('/signout', [
 	'middleware' => ['auth'],
   ]);
   
- /**
-  * Friends
-  */
+/**
+ * Friends
+ */
   
   Route::get('/friends', [
 	'uses' => '\travelbug\Http\Controllers\FriendController@getIndex',
@@ -114,6 +114,15 @@ Route::get('/signout', [
   ]);
   
   
+/**
+ * Statuses
+ */
+ 
+  Route::post('/status', [
+	'uses' => '\travelbug\Http\Controllers\StatusController@postStatus',
+	'as' => 'status.post',
+	'middleware' => ['auth'],
+  ]);
 
 
 
