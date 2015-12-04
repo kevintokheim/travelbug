@@ -115,7 +115,7 @@ Route::get('/signout', [
   
   
 /**
- * Statuses
+ * Journals
  */
  
   Route::post('/status', [

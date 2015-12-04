@@ -26,7 +26,8 @@
 				'password' => bcrypt($request->input('password'))
 			]);
 			
-			return redirect()->route('home')->with('info', 'Your account has been created and you can now sign in.');
+			
+			return redirect()->route('auth.signin')->with('info', 'Your account has been created. You can now sign in.');
 		}
 		
 		public function getSignin()

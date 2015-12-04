@@ -61,7 +61,7 @@
 
 
     <!-- Header -->
-    <a name="top"></a>
+    <a id="top"></a>
     <div class="intro-header">
         <div class="container">
 
@@ -147,7 +147,7 @@
                 <div class="col-lg-12">
                     <ul class="list-inline">
                         <li>
-                            <a href="/">Home</a>
+                            <a href="#top">Home</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
@@ -184,9 +184,7 @@ $(document).ready(function(){
 
 	    $('html, body').stop().animate({
 	        'scrollTop': $target.offset().top
-	    }, 900, 'swing', function () {
-	        window.location.hash = target;
-	    });
+	    }, 900, 'swing');
 	});
 });
 		

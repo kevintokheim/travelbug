@@ -13,13 +13,13 @@ class StatusController extends Controller
 	public function postStatus(Request $request)
 	{
 		$this->validate($request, [
-			'status' => 'required|max:1000',
+			'Status' => 'required',
 		]);
 		
 		Auth::user()->statuses()->create([
 			'body' => $request->input('status'),
 		]);
 		
-		return redirect()->back()->with('info', 'status posted');
+		return redirect()->back()->with('info', 'Your journal has been posted');
 	}
 }
