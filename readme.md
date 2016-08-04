@@ -1,3 +1,9 @@
+For the completed app, visit this link: http://infinite-badlands-99742.herokuapp.com/
+
+Travelbug is a social network designed to help travelers connect with the people they meet while traveling. To use, click on the above link, then click on the Sign Up link to create an account. After creating an account, it will redirect you back to the home page where you can now sign in. 
+
+After creating an account and signing in, search for other users, friend request them, and write about your experiences while traveling! Travelbug wants users to enhance the traveling experience by allowing users to connect with each other and write about the cool places they've seen, while at the same time not acting as a distraction on their journeys. 
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
